@@ -1,73 +1,67 @@
-# Demo-Computer-Graphics
-Demonstration of project computer graphics moved from school's private repository to public personal repository.
+# Demo: Minecraft-Style Terrain (WebGL)
 
-# About
-This project showcases a demo of a minecraft terrain genrator in JavaScript with Webgl.
+A small WebGL demo that generates Minecraft-like voxel terrain in the browser using Perlin noise. This repository contains a compact renderer and terrain generator written in JavaScript.
 
-# Setup
+## Live Preview
 
-- Download the entire project and open with visual studio code
-- Install the extension "Live Server"
-- Right click on index.html and choose the option "Open with live server"
+- Open `index.html` with Live Server (VS Code) or serve the folder with any static server.
+- Each page refresh generates a new terrain.
 
-# How it works 
+## Quick Setup
 
-### Buffer.js
-Defines the shape of a cube 
-- Creates the 3D coordination for cube corners
-- Sets up texture coordinates
-- Defines surface normals
+1. Open the project folder in Visual Studio Code.
+2. Install the **Live Server** extension (or use any static file server).
+3. Right-click `index.html` → Open with Live Server, or run a static server from the project root.
 
-### shader.js
-contains the graphics shaders
-- Vertex Shaders: Determines position of every cube in 3D world space
-- Frag,emt Shaders Determines colors of each piuxel, applies texture and lighting.
+Example (Node):
 
-### texture.js
-loads images to put on cube faces
-- Loads png files
+```bash
+npx serve .
+# then open http://localhost:5000 (port may vary)
+```
 
-### Perlinnoise.js
-creates natural random patterns
-- generate terrain heights
-- makes hills and valleys not completely random
+## What You'll Find
 
-### main.js
-Setup phase
-- Webgl initialization
-- Shader compilation
-- Buffer creation
-- texture loading
+- `buffer.js` — vertex positions, texture coordinates, and normals for a cube.
+- `shader.js` — vertex and fragment shaders for positioning, texturing, and lighting.
+- `texture.js` — loads and configures textures used on cube faces.
+- `perlinnoise.js` — Perlin noise implementation used to compute smooth terrain heights.
+- `main.js` — initialization (WebGL, shaders, buffers, textures) and world generation logic.
 
-World generation
+## Features
 
-- Use perlin noise to create hills
-- Each colujmn gets a height based on smooth random values
-- Place different block types at different depths
+- Procedural terrain from Perlin noise (hills and valleys).
+- Per-column height generation and block type assignment by depth.
+- Simple tree placement on grass blocks (trunk + leaf crown).
+- Cave/tunnel carving to create hollow spaces inside the terrain.
 
-Tree generation
+## Controls and Configuration
 
-- Randomly places trees on grass blocks
-- Each tree has a wood trunk and leaf crown
+- Camera and controls are handled by the demo scripts in `main.js` and related files.
+- You can tweak generation parameters (chunk size, noise scale, seed) directly in `main.js`.
 
-Cave generation
+Note: very large chunk sizes (e.g., > 60) can be slow or cause rendering issues in some browsers.
 
-- Creates a worl-like cave that tunnel through the terrain
-- removes block along the paths to create hollow spaces 
+## Development Notes
 
+- The renderer is intentionally small and educational: it demonstrates buffer setup, shader use, texture mapping, and simple lighting for voxels.
+- If you want to extend the project, consider separating generation and rendering logic into modules and adding a simple UI for parameters.
 
-# Showcase
+## Screenshots
 
-<img width="1908" height="912" alt="image" src="https://github.com/user-attachments/assets/ac1781fb-431e-43e0-8655-ac7e61a36ba0" />
+![Terrain 1](https://github.com/user-attachments/assets/ac1781fb-431e-43e0-8655-ac7e61a36ba0)
 
-### each refreshed page is a newly generated terrain
+![Terrain 2](https://github.com/user-attachments/assets/b37e1085-0b42-4ec9-87e7-4c1415775c8d)
 
-<img width="1906" height="916" alt="image" src="https://github.com/user-attachments/assets/b37e1085-0b42-4ec9-87e7-4c1415775c8d" />
+![Chunk size example](https://github.com/user-attachments/assets/12983071-cc37-4893-b52c-4ce0d1e1c4eb)
 
-### can also change terrain chunk size
--your browser might not like it above value 60
+## Credits
 
-<img width="1899" height="905" alt="image" src="https://github.com/user-attachments/assets/12983071-cc37-4893-b52c-4ce0d1e1c4eb" />
+Created as a demo project to explore procedural terrain generation and WebGL basics.
+
+## License
+
+See the repository root for license details, or add a `LICENSE` file if you want to set one.
 
 
 
