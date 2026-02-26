@@ -47,21 +47,11 @@ Note: very large chunk sizes (e.g., > 60) can be slow or cause rendering issues 
 - The renderer is intentionally small and educational: it demonstrates buffer setup, shader use, texture mapping, and simple lighting for voxels.
 - If you want to extend the project, consider separating generation and rendering logic into modules and adding a simple UI for parameters.
 
-## Screenshots
+## Showcase Demo 
 
 ![Terrain 1](https://github.com/user-attachments/assets/ac1781fb-431e-43e0-8655-ac7e61a36ba0)
 
 ![Terrain 2](https://github.com/user-attachments/assets/b37e1085-0b42-4ec9-87e7-4c1415775c8d)
 
 ![Chunk size example](https://github.com/user-attachments/assets/12983071-cc37-4893-b52c-4ce0d1e1c4eb)
-
-## Credits
-
-Created as a demo project to explore procedural terrain generation and WebGL basics.
-
-## License
-
-See the repository root for license details, or add a `LICENSE` file if you want to set one.
-
-
 
