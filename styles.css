@@ -1,0 +1,48 @@
+
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #181818;  
+    font-family: 'Minecraft', sans-serif;
+    background-image: url(Overworld_background.png); 
+    background-size: cover;
+    background-position: center center;
+}
+
+
+#webglContainer {
+    width: 90%;
+    height: 90%;
+    position: relative;
+    border: 5px solid #333333;  
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);  
+    background-color: rgba(0, 0, 0, 0.8);  
+    border-radius: 10px;
+}
+
+canvas {
+    display: block; 
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+
+#controls {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-family: 'Minecraft', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+

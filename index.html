@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL2 Minecraft Chunk</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="webglContainer">
+        <canvas id="glCanvas"></canvas>
+        <div id="controls">
+            <p>Gebruik de muis om te draaien</p>
+            <p>Muisklik + muiswiel: Zoom in/uit</p>
+            <p>Druk op E om naar beneden te bewegen, Q om naar boven te bewegen</p>
+        </div>
+    </div>
+
+    <script src="mat4.js"></script>
+    <script src="perlinnoise.js"></script>
+    <script src="shader.js"></script>
+    <script src="buffer.js"></script>
+    <script src="texture.js"></script>
+    <script src="controls.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
